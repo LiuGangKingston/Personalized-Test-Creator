@@ -1,16 +1,13 @@
-The Personalized Test Creator (PTC)
-
+       The Personalized Test Creator (PTC)
 
 The PTC is a simple FORTRAN program that converts an input LATEX file containing test
 questions into multiple output files that contain test sheets, solution sheets, and marking
 sheets. The LATEX input file with the original question sets contains additional PTC specific
 constructs that allow the randomization of test contents, such as the input quantities
 and the ordering of the answers in multiple-choice questions. The correct answers can be
-automatically computed using a user-dened FORTRAN subroutine with a fixed interface.
+automatically computed using a user-defined FORTRAN subroutine with a fixed interface.
 This scheme allows the automatic generation of randomized tests with the proper answer
 and marking sheets from a single original file.
-
 LATEX and FORTRAN are needed in order to use this package.
 
-We suggest to check the example files that come with the PTC package while reading this
-manual.
+We suggest to check the example files that come with the PTC package while reading the manual.
