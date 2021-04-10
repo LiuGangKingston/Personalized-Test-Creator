@@ -8,7 +8,10 @@ and the ordering of the answers in multiple-choice questions. The correct answer
 automatically computed using a user-defined FORTRAN subroutine with a fixed interface.
 This scheme allows the automatic generation of randomized tests with the proper answer
 and marking sheets from a single original file.
-LATEX and FORTRAN are needed for extensive use of this package. However, if no answer 
+LATEX and FORTRAN are needed for extensive use of this package. 
+
+
+However, if no answer 
 is needed to be calcualted with FORTRAN language, no need to code further FORTRAN code.
 
 We suggest to check the example files that come with the PTC package while reading the manual.
