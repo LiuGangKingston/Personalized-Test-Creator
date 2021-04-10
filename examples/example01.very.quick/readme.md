@@ -1,5 +1,4 @@
-      This is the first and very quick example of
-          The Personalized Test Creator (PTC)
+      This is the first and very quick example of The Personalized Test Creator (PTC)
 
 
 Supposing a teacher at a Canadian elementary school is testing 198 pupils, then wants to generate 198 copies of randomized test papers, based on her two questions. 
