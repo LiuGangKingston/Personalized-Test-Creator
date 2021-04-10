@@ -28,10 +28,10 @@ SUBROUTINE SOLVE_THE_QUESTION(PRINT_OUT_NUMBER, AN_ACCESSORY_INTEGER)
 
   CASE(3)
 
-  CASE(6791)                    ! If zero, no need to do next.
-      CALCULATED_I(1)=GENERATED_I(1) + GENERATED_I(2)  ! Acceleration=Force/Mass
-      CALCULATED_TYPE(1)=I_TYPE                          ! Vector data type of the out-puts
-      CALCULATED_NUMBER=1                                ! Total number of out-puts
+  CASE(6791)                   
+      CALCULATED_I(1)=GENERATED_I(1) + GENERATED_I(2) 
+      CALCULATED_TYPE(1)=I_TYPE                         
+      CALCULATED_NUMBER=1                             
 
 
   CASE DEFAULT
