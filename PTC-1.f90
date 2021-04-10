@@ -149,18 +149,18 @@ MODULE ENVIRONMENT_SETTING
     INTEGER      , PARAMETER ::  MATRIX_BRACE_LOWER_V=9
     INTEGER      , PARAMETER ::  MATRIX_BRACE_UPPER_V=10
     CHARACTER (*), PARAMETER ::  MATRIX_BRACES_BEGIN(NUMBER_OF_MATRIX_BRACES)=       &
-                                    (/ '  \left( \begin{array}', ' \left( \begin{array}', &
-                                       '  \begin{matrix}    ',  '  \begin{matrix}    ', &
-                                       '  \begin{pmatrix}   ',  '  \begin{pmatrix}   ', &
-                                       '  \begin{bmatrix}   ',  '  \begin{Bmatrix}   ', &
-                                       '  \begin{vmatrix}   ',  '  \begin{Vmatrix}   '    /)
+                                    (/ '  \left( \begin{array}',  ' \left( \begin{array} ', &
+                                       '  \begin{matrix}      ',  '  \begin{matrix}      ', &
+                                       '  \begin{pmatrix}     ',  '  \begin{pmatrix}     ', &
+                                       '  \begin{bmatrix}     ',  '  \begin{Bmatrix}     ', &
+                                       '  \begin{vmatrix}     ',  '  \begin{Vmatrix}     '    /)
 
     CHARACTER (*), PARAMETER ::  MATRIX_BRACES_END(NUMBER_OF_MATRIX_BRACES)=         &
                                     (/ ' \end{array} \right) ', ' \end{array} \right) ', &
-                                       ' \end{matrix}       ', ' \end{matrix}       ', &
-                                       ' \end{pmatrix}      ', ' \end{pmatrix}      ', &
-                                       ' \end{bmatrix}      ', ' \end{Bmatrix}      ', &
-                                       ' \end{vmatrix}      ', ' \end{Vmatrix}      '    /)
+                                       ' \end{matrix}        ', ' \end{matrix}        ', &
+                                       ' \end{pmatrix}       ', ' \end{pmatrix}       ', &
+                                       ' \end{bmatrix}       ', ' \end{Bmatrix}       ', &
+                                       ' \end{vmatrix}       ', ' \end{Vmatrix}       '    /)
 
     CHARACTER (*), PARAMETER ::  CONSTANT_PREKEY=ROOT_KEY//'CONSTANT-'
     CHARACTER (*), PARAMETER ::  WHOLE_TABLE_KEY='WHOLE-TABLE'
