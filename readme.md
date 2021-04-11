@@ -16,6 +16,6 @@ LATEX and FORTRAN are needed for extensive use of this package.
 
 However, if no answer is needed to be calcualted with FORTRAN language, no need to code 
 further FORTRAN code. For example, all questions are multiple-choice, where the correct 
-choice can always be figured out "automatically", or only a few test papers are needed, 
+choice can always be figured out "automatically" as example02, or only a few test papers are needed, 
 where all computations for answers can be done by any other means.
 
