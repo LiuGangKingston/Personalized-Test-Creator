@@ -1,4 +1,7 @@
        The Personalized Test Creator (PTC)
+       
+       Gang Liu (gl.cell@outlook, http://orcid.org/0000-0003-1575-9290)
+       
 
 The PTC is a FORTRAN program that converts an input LATEX file containing test
 questions into multiple output files that contain test sheets, solution sheets, and marking
