@@ -11,7 +11,7 @@ and marking sheets from a single original file.
 LATEX and FORTRAN are needed for extensive use of this package. 
 
 
-However, if no answer 
-is needed to be calcualted with FORTRAN language, no need to code further FORTRAN code.
+However, if no answer is needed to be calcualted with FORTRAN language, no need to code 
+further FORTRAN code. For example, all questions are multiple-choice, or only a few test 
+papers are needed, where all computations for answers can be done by any other means.
 
-We suggest to check the example files that come with the PTC package while reading the manual.
