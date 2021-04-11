@@ -9,7 +9,7 @@
 !   Please be advised that neither the author nor HPCVL accept any
 !   responsibility for any consequences arising out of the usage of this
 !   software, especially for damage.
-!   Copyright (c) 2007-2008 by High Performance Computing Virtual Laboratory
+!   Copyright (c) 2007-2021 by High Performance Computing Virtual Laboratory
 !
 !
 MODULE ENVIRONMENT_SETTING
