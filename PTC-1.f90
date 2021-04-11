@@ -4,7 +4,8 @@
 !           Version 1.0
 !   free for registered non-commercial use.
 !   This file is not suggested to be changed by users for normal usage.
-!   Any problems/suggestions/comments, please send to gang.liu@queensu.ca
+!   Any problems/suggestions/comments, please send to gang.liu@queensu.ca 
+!   or to gl.cell@outlook.com.
 !   Please be advised that neither the author nor HPCVL accept any
 !   responsibility for any consequences arising out of the usage of this
 !   software, especially for damage.
