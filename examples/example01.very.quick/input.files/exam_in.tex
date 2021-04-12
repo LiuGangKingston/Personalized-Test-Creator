@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\markboth{ {\today}}{{\today}}
+\pagestyle{myheadings}
+\usepackage{amsmath}
+
+\begin{document}
+
+
+
+
+PTC-EXAM-TITLE
+{\LARGE {\textbf{ A QUICK TEST EXAMPLE}}}
+PTC-EXAM-TITLE-END
+
+
+
+
+PTC-QUESTION(101;5.0;4;1)
+
+Please calculate: 
+\begin{equation}
+PTC-III (20; 60; 2) + PTC-III (40; 80; 7) = \nonumber 
+\end{equation}
+
+PTC-ANSWER
+   PTC-PRINT-OUT(1)
+PTC-ANSWER-END
+
+PTC-SOLUTION
+$PTC-PRINT-IN(1) + PTC-PRINT-IN(2)=  PTC-PRINT-OUT(1)$
+PTC-SOLUTION-END
+
+PTC-QUESTION-END
+
+
+
+
+PTC-QUESTION  (201;5.0;4;1)
+Please choose the correct one from the following statements.
+PTC-MULTICHOICE-USER(None of above.)
+   PTC-CHOICE (1) The capital of Canada is Ottawa.
+   PTC-CHOICE (0) The capital of Canada is Toronto.
+   PTC-CHOICE (0) The capital of Canada is Montreal. 
+   PTC-CHOICE (0) The capital of Canada is Quebec City.
+   PTC-CHOICE (0) The capital of Canada is Calgary.
+   PTC-CHOICE (0) The capital of Canada is Vancouver.
+PTC-MULTICHOICE-USER-END
+PTC-QUESTION-END
+
+
+
+
+PTC-EXAM-TAIL
+
+PTC-EXAM-TAIL-END
+
+
+
+
+\end{document}
