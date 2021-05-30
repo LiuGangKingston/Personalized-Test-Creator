@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\markboth{ {\today}}{{\today}}
+\pagestyle{myheadings}
+\usepackage{amsmath}
+\usepackage{epsfig}
+
+\begin{document}
+
+
+PTC-EXAM-TITLE
+{\Huge  THIS IS AN EXAMPLE OF}
+{\Huge  PERSONALIZED TESTS. }
+PTC-EXAM-TITLE-END
+
+
+PTC-QUESTION(60;40.0;8;0)
+
+$ \left( \begin{array}{ccccccccc}
+ PTC-INTEGER-MATRIX(3;4;24;67;1)
+ \end{array}\right) \times
+\left( \begin{array}{c}
+ PTC-INTEGER-MATRIX(4;1;5;16;1)
+ \end{array}\right) $ =?
+
+
+$ PTC-STRING-MATRIX(A;6;4; \alpha ; \beta ; \gamma ; \delta ; \epsilon ; \varepsilon ;
+                   \zeta ; \eta ; \rho ; \sigma ; \Gamma ; \Delta ; \Theta ; \Lambda ;
+                   \Xi ; \Upsilon ; \Phi ; \Psi ; \Omega )
+ PTC-STRING-MATRIX(A;4;1; \alpha ; \beta ; \gamma ; \delta ; \epsilon ; \varepsilon ;
+                   \zeta ; \eta ; \rho ; \sigma) $ =?
+
+PTC-ANSWER
+
+$\left( \begin{array}{ccccccccccccccc}
+ PTC-PRINT-IN(1)
+ \end{array}\right) \times
+\left( \begin{array}{c}
+ PTC-PRINT-IN(2)
+ \end{array}\right)  =
+ \left( \begin{array}{c}
+ PTC-PRINT-OUT(1)
+ \end{array}\right)  $
+
+$ PTC-PRINT-IN(3)
+ PTC-PRINT-IN(4)=
+ PTC-PRINT-OUT(2)  $
+
+PTC-ANSWER-END
+
+PTC-SOLUTION
+PTC-SOLUTION-END
+
+\vspace{0.3in}
+PTC-QUESTION-END
+
+
+
+
+
+PTC-EXAM-TAIL
+
+PTC-EXAM-TAIL-END
+
+
+\end{document}
