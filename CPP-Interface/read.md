@@ -2,7 +2,7 @@ This is the CPP-interface of the PTC. By using this interface (routines to acces
 
 To use it, please check the file cpp.interface.cpp and template.cpp or example*.cpp.
 
-The commands to compine in Linux are 
+The commands to compile in Linux are 
 
      gfortran -c PTC-1.f90 fortran.for.cpp.f90 
      g++ example10.cpp PTC-1.o fortran.for.cpp.o -lgfortran
