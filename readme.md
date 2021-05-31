@@ -2,20 +2,9 @@
        
        Gang Liu (gl.cell@outlook, http://orcid.org/0000-0003-1575-9290)
        
+       
+The PTC can generate as many as needed test papers based on one original test paper written in Latex. In each generated test paper, the question order and quantities in questions can also be randomized, according to further commands in the form of PTC-* in the Latex file. 
 
-The PTC is a FORTRAN program that converts an input LATEX file containing test
-questions into multiple output files that contain test sheets, solution sheets, and marking
-sheets. The LATEX input file with the original question sets contains additional PTC specific
-constructs that allow the randomization of test contents, such as the input quantities
-and the ordering of the answers in multiple-choice questions. The correct answers can be
-automatically computed using a user-defined FORTRAN subroutine with a fixed interface.
-This scheme allows the automatic generation of randomized tests with the proper answer
-and marking sheets from a single original file.
-LATEX and FORTRAN are needed for extensive use of this package. 
+For many test papers, corresponding answers should also be generated. If the test paper is only made of multiple-choice questions, all the answers will be generated "automatically", then no programming is needed. For computing questions, users can code but only the computing part for answers, in FORTRAN, C, or C++ language. While the PTC was orginally coded in FORTRAN, the C and C++ interfaces have been added recently. 
 
-
-However, if no answer is needed to be calcualted with FORTRAN language, no need to code 
-further FORTRAN code. For example, all questions are multiple-choice, where the correct 
-choice can always be figured out "automatically" as example02, or only a few test papers are needed, 
-where all computations for answers can be done by any other means.
-
+Since this is a combination of computing languages with Latex, extensive work can be done. In the examples/example10.matrix.and.symbol.operations of FORTRAN/C/C++ languages, a matrix multiplication of mathematical symbols is presented. Of course, further mathematical operations, like 2ab + 3bc + 4ab + 9bc = 6ab + 12bc, can also be done by using this package.  
