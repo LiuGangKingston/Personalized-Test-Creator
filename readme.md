@@ -11,10 +11,6 @@ Since this is a combination of computing languages with Latex, extensive work ca
 
       examples/example10.matrix.and.symbol.operations 
       
-of FORTRAN/C/C++ languages, a matrix multiplication of mathematical symbols is presented. Of course, further mathematical operations, like 
-
-      2ab + 3bc + 4ab + 9bc = 6ab + 12bc 
-      
-can also be done by using this package.  
+of FORTRAN/C/C++ languages, a matrix multiplication of mathematical symbols is presented. Of course, further mathematical operations can also be coded with this package.  
 
 
