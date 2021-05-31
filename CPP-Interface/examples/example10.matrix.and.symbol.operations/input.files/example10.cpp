@@ -1,6 +1,7 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include <string>
+#include <cstring>
+#include <iostream>
+using namespace std;
 #include "cpp.interface.cpp"
 
 
@@ -50,7 +51,8 @@ void c_solve_the_question_(int * question_id)
       cget_generated_mtx_sizes(input_number, size);
       cget_generated_mtx_sizes(input_number1, sizea);
       if (size[1] != sizea[0]) {
-         printf("Stopped for inconsistent array sizes %d %d for Question %d \n", size[1], sizea[0], * question_id);
+         cout << "Stopped for inconsistent array sizes " <<size[1]
+              <<", " << sizea[0] << " for Question " << * question_id << endl;
          exit(2);
       }
       sizeb[0] = size[0];
@@ -77,7 +79,8 @@ void c_solve_the_question_(int * question_id)
       cget_generated_mtx_sizes(input_number, size);
       cget_generated_mtx_sizes(input_number1, sizea);
       if (size[1] != sizea[0]) {
-         printf("Stopped for inconsistent string array sizes %d %d for Question %d \n", size[1], sizea[0], * question_id);
+         cout << "Stopped for inconsistent array sizes " <<size[1]
+              <<", " << sizea[0] << " for Question " << * question_id << endl;
          exit(2);
       }
       sizeb[0] = size[0];
@@ -96,7 +99,7 @@ void c_solve_the_question_(int * question_id)
                   cget_generated_mtx_element_s(input_number1, iaa, ia, stra);
                   iii = iii + strlen(str) + strlen(stra) + 12;
                   if (iii > SINGLE_STRING_SIZE) {
-                      printf("Stopped for too long string %d for Question %d \n", iii, * question_id);
+                      cout << "Stopped for too long string " <<iii << " for Question " << * question_id << endl;
                       exit(2);
                   }
                   strcat( straa, str);

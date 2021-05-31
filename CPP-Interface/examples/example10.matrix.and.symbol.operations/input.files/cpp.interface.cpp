@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #define SINGLE_STRING_SIZE 200
 
 extern "C"{
