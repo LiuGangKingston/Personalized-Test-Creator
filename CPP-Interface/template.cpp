@@ -1,6 +1,7 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include <string>
+#include <cstring>
+#include <iostream>
+using namespace std;
 #include "cpp.interface.cpp"
 
 
@@ -44,32 +45,6 @@ void c_solve_the_question_(int * question_id)
     switch( * question_id )
     {
 /*	case 60:
-      input_number = 1;
-      input_number1 = 2;
-      bkt = cget_generated_mtx_bracket(input_number);
-      cget_generated_mtx_sizes(input_number, size);
-      cget_generated_mtx_sizes(input_number1, sizea);
-      if (size[1] != sizea[0]) {
-         printf("Stopped for inconsistent array sizes %d %d for Question %d \n", size[1], sizea[0], * question_id);
-         exit(2);
-      }
-      sizeb[0] = size[0];
-      sizeb[1] = sizea[1];
-      cal_number = 1;
-      c_allocate_mtx_i(cal_number, sizeb);
-      cset_calculated_mtx_bracket(cal_number, bkt);
-
-      for (i = 0; i < sizeb[0]; i++) {
-          for (ia = 0; ia < sizeb[1]; ia++) {
-              iii = 0;
-              for (iaa = 0; iaa < size[1]; iaa++) {
-
-                  iii = iii + cget_generated_mtx_element_i(input_number, i, iaa) *
-                              cget_generated_mtx_element_i(input_number1, iaa, ia) ;
-              }
-              cset_matrix_element_i(cal_number, i, ia, iii);
-          }
-      }
 
       input_number = 3;
       input_number1 = 4;
@@ -77,7 +52,8 @@ void c_solve_the_question_(int * question_id)
       cget_generated_mtx_sizes(input_number, size);
       cget_generated_mtx_sizes(input_number1, sizea);
       if (size[1] != sizea[0]) {
-         printf("Stopped for inconsistent string array sizes %d %d for Question %d \n", size[1], sizea[0], * question_id);
+         cout << "Stopped for inconsistent array sizes " <<size[1]
+              <<", " << sizea[0] << " for Question " << * question_id << endl;
          exit(2);
       }
       sizeb[0] = size[0];
@@ -96,7 +72,7 @@ void c_solve_the_question_(int * question_id)
                   cget_generated_mtx_element_s(input_number1, iaa, ia, stra);
                   iii = iii + strlen(str) + strlen(stra) + 12;
                   if (iii > SINGLE_STRING_SIZE) {
-                      printf("Stopped for too long string %d for Question %d \n", iii, * question_id);
+                      cout << "Stopped for too long string " <<iii << " for Question " << * question_id << endl;
                       exit(2);
                   }
                   strcat( straa, str);
