@@ -7,4 +7,14 @@ The PTC can generate as many as needed test papers based on one original test pa
 
 For many test papers, corresponding answers should also be generated. If the test paper is only made of multiple-choice questions, all the answers will be generated "automatically", then no programming is needed. For computing questions, users can code but only the computing part for answers, in FORTRAN, C, or C++ language. While the PTC was orginally coded in FORTRAN, the C and C++ interfaces have been added recently. 
 
-Since this is a combination of computing languages with Latex, extensive work can be done. In the examples/example10.matrix.and.symbol.operations of FORTRAN/C/C++ languages, a matrix multiplication of mathematical symbols is presented. Of course, further mathematical operations, like 2ab + 3bc + 4ab + 9bc = 6ab + 12bc, can also be done by using this package.  
+Since this is a combination of computing languages with Latex, extensive work can be done. In the 
+
+      examples/example10.matrix.and.symbol.operations 
+      
+of FORTRAN/C/C++ languages, a matrix multiplication of mathematical symbols is presented. Of course, further mathematical operations, like 
+
+      2ab + 3bc + 4ab + 9bc = 6ab + 12bc 
+      
+can also be done by using this package.  
+
+
