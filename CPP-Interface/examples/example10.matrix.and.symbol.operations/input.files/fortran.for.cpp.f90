@@ -542,7 +542,7 @@ subroutine get_generated_s(in_number, the_sequence, the_string)
     the_sequence = GENERATED_I(in_number)
     CALL CHECK_STRING_SIZE(in_number, the_sequence, "get_generated_s(in_number, the_sequence, the_string)")
     the_string   = ' '
-    the_string   = trim(INPUT_SSS(the_sequence))//char(0)
+    the_string   = trim(INPUT_SSS(the_sequence))//C_NULL_CHAR
     the_sequence = GENERATED_I(in_number) - GENERATED_POSITION(1,in_number) + 1
     return
 end subroutine get_generated_s
@@ -561,7 +561,7 @@ subroutine get_generated_l(in_number, the_sequence, the_result, the_string)
     the_sequence = GENERATED_I(in_number)
     CALL CHECK_STRING_SIZE(in_number, the_sequence, "get_generated_l(in_number, the_sequence, the_result, the_string)")
     the_string   = ' '
-    the_string   = trim(INPUT_SSS(the_sequence))//char(0)
+    the_string   = trim(INPUT_SSS(the_sequence))//C_NULL_CHAR
     the_sequence = GENERATED_I(in_number) - GENERATED_POSITION(1,in_number) + 1
     the_result   = 0
     if(GENERATED_L(in_number)) the_result = 1
@@ -698,7 +698,7 @@ subroutine get_generated_mtx_element_s(in_number, row_number, col_number, the_st
     call CHECK_ELEMENT_STRING_SIZE(in_number, row_number, col_number, &
                         &"get_generated_mtx_element_s(in_number, row_number, col_number, the_string)")
     the_string = ' '
-    the_string = trim(GENERATED_M(in_number)%STRING_M(row_number,col_number))//char(0)
+    the_string = trim(GENERATED_M(in_number)%STRING_M(row_number,col_number))//C_NULL_CHAR
     return
 end subroutine get_generated_mtx_element_s
 
@@ -767,7 +767,7 @@ subroutine get_input_string(in_number, sequential_number, the_string)
     call CHECK_STRING_SIZE(in_number, sequential_number, &
                            &"get_input_string(in_number, sequential_number, the_string)")
     the_string = ' '
-    the_string = trim(INPUT_SSS(sequential_number))//char(0)
+    the_string = trim(INPUT_SSS(sequential_number))//C_NULL_CHAR
     return
 end subroutine get_input_string
 
@@ -910,7 +910,7 @@ subroutine set_calculated_s(cal_number, the_string)
     integer        :: cal_number, new_string_p, k
     character(len=MAX_NUMBER_OF_CHARACTERS_SSS):: the_string
     call CHECK_CAL_DATA_TYPE(cal_number, S_TYPE, "set_calculated_s(cal_number, the_string)")
-    k = index(the_string, char(0))
+    k = index(the_string, C_NULL_CHAR)
     if (k.le.0) then
             print*, 'This is in the FORTRAN-called-by-C routine '
             print*, "set_calculated_s(cal_number, the_string)"
@@ -1093,7 +1093,7 @@ subroutine set_calculated_mtx_element_s(cal_number, row_number, col_number, the_
     character(len=MAX_NUMBER_OF_CHARACTERS_SSS):: the_string
     call CHECK_CAL_ARRAY_EXIST_AND_SIZE(cal_number, S_MATRIX_TYPE, row_number, col_number, &
                         &"set_calculated_mtx_element_s(cal_number, row_number, col_number, the_result)")
-    k = index(the_string, char(0))
+    k = index(the_string, C_NULL_CHAR)
     if (k.le.0) then
             print*, 'This is in the FORTRAN-called-by-C routine '
             print*, "set_calculated_mtx_element_s(cal_number, row_number, col_number, the_string)"
