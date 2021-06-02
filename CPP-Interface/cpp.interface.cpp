@@ -47,15 +47,15 @@ extern void get_input_rrr_(int * in_number, double the_result[3]);
 extern void get_input_ccc_(int * in_number, double the_result[6]);
 extern void get_input_vvv_(int * in_number, double the_result[9]);
 
+extern void get_the_constant_value_of_(char the_string[SINGLE_STRING_SIZE], double * the_result);
 
 
-
-void verify_c_constants()
+void c_constants_to_be_verified()
 {    int aconst = SINGLE_STRING_SIZE;
      check_single_string_size_(&aconst);
 }
 
-int cgets_generated_i(int input)
+int cget_generated_i(int input)
 {   int the_result;
     int in_number ;
     in_number = input;
@@ -63,7 +63,7 @@ int cgets_generated_i(int input)
     return(the_result);
 }
 
-double cgets_generated_r(int input)
+double cget_generated_r(int input)
 {   double the_result;
     int in_number ;
     in_number = input;
@@ -71,13 +71,13 @@ double cgets_generated_r(int input)
     return(the_result);
 }
 
-void cgets_generated_c(int input, double the_result[2])
+void cget_generated_c(int input, double the_result[2])
 {    int in_number ;
      in_number = input;
      get_generated_c_(&in_number, the_result);
 }
 
-int cgets_generated_s(int input, char the_string[SINGLE_STRING_SIZE])
+int cget_generated_s(int input, char the_string[SINGLE_STRING_SIZE])
 {   int the_sequence;
     int in_number ;
     in_number = input;
@@ -86,7 +86,7 @@ int cgets_generated_s(int input, char the_string[SINGLE_STRING_SIZE])
     return(the_sequence);
 }
 
-int cgets_generated_l(int input, char the_string[SINGLE_STRING_SIZE])
+int cget_generated_l(int input, char the_string[SINGLE_STRING_SIZE])
 {   int   the_sequence;
     int   the_result;
     int   in_number ;
@@ -96,7 +96,7 @@ int cgets_generated_l(int input, char the_string[SINGLE_STRING_SIZE])
     return(the_result);
 }
 
-void cgets_generated_v(int input, double the_result[3])
+void cget_generated_v(int input, double the_result[3])
 {    int in_number ;
      in_number = input;
      get_generated_v_(&in_number, the_result);
@@ -315,6 +315,47 @@ void cset_calculated_accuracy(int cal_number, double the_result[3])
     compute_number = cal_number;
     set_calculated_accuracy_(&compute_number, the_result);
 }
+
+
+double cget_the_constant_value_of(char the_string[SINGLE_STRING_SIZE])
+{   double the_result;
+    get_the_constant_value_of_(the_string, &the_result);
+    return(the_result);
+}
+
+
+/* Examples to retrieve the constants:
+    printf("The the constant is %f \n", cget_the_constant_value_of("Acceleration due to earth's gravity\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("EARTH-ACCELERATION\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Avogadro's number\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("AVOGADRO-NUMBER\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Boltzmann's constant\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("BOLTZMANN-CONSTANT\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Coulomb's constant\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("COULOMB-CONSTANT\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Electron charge magnitiude\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("ELECTRON-CHARGE\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Permeability of free space\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("FREE-PERMEABILITY\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Permittivity of free space\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("FREE-PERMITTIVITY\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Pi\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("PI\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Planck's constant\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("PLANCK-CONSTANT\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Mass of electron\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("ELECTRON-MASS\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Mass of neutron\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("NEUTRON-MASS\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Mass of proton\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("PROTON-MASS\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Speed of light in vacuum\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("SPEED-OF-LIGHT\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Universal gravitational constant\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("GRAVITATIONAL-CONSTANT\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Universal gas constant\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("UNIVERSAL-GAS-CONSTANT\0"));
+*/
 
 
 void c_solve_the_question_(int * question_id);
