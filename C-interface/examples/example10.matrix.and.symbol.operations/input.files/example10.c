@@ -38,7 +38,11 @@ void c_solve_the_question_(int * question_id)
     // End of the predefined varaibles.
 
     // Constant checks with FORTRAN code.
-    verify_c_constants();
+    c_constants_to_be_verified();
+
+    // A constant as an example (more in the *.interface.c file):
+    // printf("The the constant is %f \n", cget_the_constant_value_of("GRAVITATIONAL-CONSTANT\0"));
+
 
 
     switch( * question_id )
