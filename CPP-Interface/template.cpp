@@ -48,8 +48,8 @@ void c_solve_the_question_(int * question_id)
 
     switch( * question_id )
     {
-	case 60:
-/*
+/*	case 60:
+
 
       input_number = 3;
       input_number1 = 4;
