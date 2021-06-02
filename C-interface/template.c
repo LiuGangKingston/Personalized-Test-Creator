@@ -38,38 +38,16 @@ void c_solve_the_question_(int * question_id)
     // End of the predefined varaibles.
 
     // Constant checks with FORTRAN code.
-    verify_c_constants();
+    c_constants_to_be_verified();
+
+    // A constant as an example (more in the *.interface.c file):
+    // printf("The the constant is %f \n", cget_the_constant_value_of("GRAVITATIONAL-CONSTANT\0"));
+
 
 
     switch( * question_id )
     {
 /*	case 60:
-      input_number = 1;
-      input_number1 = 2;
-      bkt = cget_generated_mtx_bracket(input_number);
-      cget_generated_mtx_sizes(input_number, size);
-      cget_generated_mtx_sizes(input_number1, sizea);
-      if (size[1] != sizea[0]) {
-         printf("Stopped for inconsistent array sizes %d %d for Question %d \n", size[1], sizea[0], * question_id);
-         exit(2);
-      }
-      sizeb[0] = size[0];
-      sizeb[1] = sizea[1];
-      cal_number = 1;
-      c_allocate_mtx_i(cal_number, sizeb);
-      cset_calculated_mtx_bracket(cal_number, bkt);
-
-      for (i = 0; i < sizeb[0]; i++) {
-          for (ia = 0; ia < sizeb[1]; ia++) {
-              iii = 0;
-              for (iaa = 0; iaa < size[1]; iaa++) {
-
-                  iii = iii + cget_generated_mtx_element_i(input_number, i, iaa) *
-                              cget_generated_mtx_element_i(input_number1, iaa, ia) ;
-              }
-              cset_matrix_element_i(cal_number, i, ia, iii);
-          }
-      }
 
       input_number = 3;
       input_number1 = 4;
@@ -112,11 +90,13 @@ void c_solve_the_question_(int * question_id)
 
 
 			break;
+
+	case 81:
+			break;
 */
 	default:
 			break;
     }
-
 }
 
 
