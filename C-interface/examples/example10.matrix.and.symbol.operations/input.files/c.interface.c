@@ -326,6 +326,42 @@ double cget_the_constant_value_of(char the_string[SINGLE_STRING_SIZE])
 }
 
 
+/* Examples to retrieve the constants:
+    printf("The the constant is %f \n", cget_the_constant_value_of("Acceleration due to earth's gravity\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("EARTH-ACCELERATION\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Avogadro's number\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("AVOGADRO-NUMBER\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Boltzmann's constant\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("BOLTZMANN-CONSTANT\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Coulomb's constant\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("COULOMB-CONSTANT\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Electron charge magnitiude\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("ELECTRON-CHARGE\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Permeability of free space\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("FREE-PERMEABILITY\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Permittivity of free space\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("FREE-PERMITTIVITY\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Pi\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("PI\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Planck's constant\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("PLANCK-CONSTANT\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Mass of electron\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("ELECTRON-MASS\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Mass of neutron\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("NEUTRON-MASS\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Mass of proton\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("PROTON-MASS\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Speed of light in vacuum\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("SPEED-OF-LIGHT\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Universal gravitational constant\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("GRAVITATIONAL-CONSTANT\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("Universal gas constant\0"));
+    printf("The the constant is %f \n", cget_the_constant_value_of("UNIVERSAL-GAS-CONSTANT\0"));
+*/
+
+
+
+
 
 
 
