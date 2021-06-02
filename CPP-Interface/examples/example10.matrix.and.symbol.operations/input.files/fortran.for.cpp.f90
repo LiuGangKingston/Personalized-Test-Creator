@@ -1,6 +1,7 @@
 MODULE FORTRAN_FOR_C
     USE BASE_DATA
-      use iso_c_binding
+    use iso_c_binding
+    USE CONSTANT_INTERFACE
     IMPLICIT NONE
     INTEGER, PARAMETER :: LENGTHOFTYPENAME = 16
     CHARACTER (LEN = LENGTHOFTYPENAME), PARAMETER ::  TYPE_NAMES(10)=         &
@@ -1108,6 +1109,39 @@ subroutine set_calculated_mtx_element_s(cal_number, row_number, col_number, the_
     CALCULATED_M(cal_number)%STRING_M(row_number,col_number)(1:k-1) = the_string(1:k-1)
     return
 end subroutine set_calculated_mtx_element_s
+
+
+
+
+subroutine get_the_constant_value_of(the_string, the_value)
+    use FORTRAN_FOR_C
+    implicit none
+    integer          :: k
+    double precision :: the_value
+    character(len=MAX_NUMBER_OF_CHARACTERS_SSS):: the_string
+    k = index(the_string, C_NULL_CHAR)
+    if (k.le.0) then
+            print*, 'This is in the FORTRAN-called-by-C routine '
+            print*, "get_the_constant_value_of(the_string, the_value)"
+            print*, 'for QUESTION_IDENTIFIER ',QUESTION_IDENTIFIER
+            print*, 'for EXAMINEE_NUMBER ', EXAMINEE_NUMBER
+            print*, 'Since the string is not ended with "NULL": ', the_string
+            print*, 'this run stopped. '
+            STOP
+    end if
+    the_value = -1.0d99
+    the_value = GET_CONSTANT_VALUE_OF(the_string(1:k-1))
+    if (the_value .lt. -10.0d0) then
+            print*, 'This is in the FORTRAN-called-by-C routine '
+            print*, "get_the_constant_value_of(the_string, the_value)"
+            print*, 'for QUESTION_IDENTIFIER ',QUESTION_IDENTIFIER
+            print*, 'for EXAMINEE_NUMBER ', EXAMINEE_NUMBER
+            print*, 'Since the returned value is not reasonable as ', the_value
+            print*, 'this run stopped. '
+            STOP
+    end if
+    return
+end subroutine get_the_constant_value_of
 
 
 
