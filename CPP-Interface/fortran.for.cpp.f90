@@ -38,13 +38,16 @@ CONTAINS
         IMPLICIT NONE
         INTEGER           :: IN_NUMBER
         CHARACTER (LEN=*) :: ROUTINENAME
-        IF((IN_NUMBER.LE.0) .OR. (IN_NUMBER.GT.INPUT_NUMBER)) THEN
+       !IF((IN_NUMBER.LE.0) .OR. (IN_NUMBER.GT.INPUT_NUMBER)) THEN
+        IF((IN_NUMBER.LE.0) .OR. (IN_NUMBER.GT.MAX_NUMBER_OF_INPUTS_PQ)) THEN
+
             print*, 'This is in the FORTRAN-called-by-C routine '
             print*, TRIM(ROUTINENAME)
             print*, 'for QUESTION_IDENTIFIER ',QUESTION_IDENTIFIER
             print*, 'for EXAMINEE_NUMBER ', EXAMINEE_NUMBER, ' .'
             print*, 'The value of the argument "in_number" is ', IN_NUMBER
-            print*, "which must be in the range from 1 to ", INPUT_NUMBER
+           !print*, "which must be in the range from 1 to ", INPUT_NUMBER
+            print*, "which must be in the range from 1 to ", MAX_NUMBER_OF_INPUTS_PQ
             print*, "then this run stopped."
             STOP
         END IF
@@ -80,7 +83,7 @@ CONTAINS
         CHARACTER (LEN=*) :: ROUTINENAME
         CALL CHECK_IN_NUMBER(IN_NUMBER, ROUTINENAME)
         ACTUAL_TYPE  = INPUT_TYPE(IN_NUMBER)
-        IF(ASSUMED_TYPE.NE.ACTUAL_TYPE) THEN
+        IF((ACTUAL_TYPE.NE.UNDEFINED_TYPE) .AND. (ASSUMED_TYPE.NE.ACTUAL_TYPE)) THEN
             print*, 'This is in the FORTRAN-called-by-C routine '
             print*, TRIM(ROUTINENAME)
             print*, 'for QUESTION_IDENTIFIER ',QUESTION_IDENTIFIER
