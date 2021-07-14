@@ -35,7 +35,6 @@ void c_solve_the_question_(int * question_id)
     char stra3[SINGLE_STRING_SIZE], stra4[SINGLE_STRING_SIZE], stra5[SINGLE_STRING_SIZE];
     char straa[SINGLE_STRING_SIZE], strbb[SINGLE_STRING_SIZE], strcc[SINGLE_STRING_SIZE];
     char strdd[SINGLE_STRING_SIZE], stree[SINGLE_STRING_SIZE], strff[SINGLE_STRING_SIZE];
-    char strarray[100][SINGLE_STRING_SIZE];
 
     // End of the predefined varaibles.
 
@@ -309,6 +308,21 @@ void c_solve_the_question_(int * question_id)
 
 
 
+
+    case(50):
+      cget_generated_v(1, v1);
+      r2 = cget_generated_r(2);
+      if(r2!=0.0e0){
+         for(i=0; i<3; i++) {
+            v[i] = v1[i] / r2;
+         }
+      }
+      cset_calculated_v(1,v);
+      break;
+
+
+
+
 	case 60:
       input_number = 1;
       input_number1 = 2;
@@ -378,14 +392,61 @@ void c_solve_the_question_(int * question_id)
           }
       }
 
+      break;
 
-			break;
 
-	case 81:
-			break;
+
+
+	case 70:
+
+	  ia1 = cget_generated_i(1);
+	  ia2 = cget_generated_i(2);
+	  ia3 = cget_generated_i(3);
+
+	  i1 = ia3;
+      cset_calculated_i(1, i1);   // A in equation of A*x^2+B*x+C=0
+
+      i3 = -ia3*(ia1 + ia2);
+      cset_calculated_i(3, i3);
+                                   // B in equation of A*x^2+B*x+C=0
+
+      strcpy(str, "+\0");
+      if(i3 <= 0) {strcpy(str, " \0");}
+      cset_calculated_s(2, str);
+
+      i5 = ia3*(ia1 * ia2);
+      cset_calculated_i(5, i5);
+                                   // C in equation of A*x^2+B*x+C=0
+
+      strcpy(str, "+\0");
+      if(i5 <= 0) {strcpy(str, " \0");}
+      cset_calculated_s(4, str);
+
+      i6 = i1 * (ia1 * ia1); // A*(x1)^2 for verifying purpose
+      i7 = i3 * ia1;         // B*x1 for verifying purpose
+      i8 = i6 + i7;          // A*(x1)^2 +B*x1 for verifying purpose
+      i9 = i8 + i5;          // A*(x1)^2 +B*x1 +C for verifying purpose
+
+      iaa = i1 * (ia2 * ia2);  // A*(x2)^2 for verifying purpose
+      ibb = i3 * ia2;          // B*x2 for verifying purpose
+      icc = iaa + ibb;         // A*(x2)^2 +B*x2 for verifying purpose
+      idd = icc + i5;          // A*(x2)^2 +B*x2 +C for verifying purpose
+
+      cset_calculated_i(6, i6);
+      cset_calculated_i(7, i7);
+      cset_calculated_i(8, i8);
+      cset_calculated_i(9, i9);
+      cset_calculated_i(10, iaa);
+      cset_calculated_i(11, ibb);
+      cset_calculated_i(12, icc);
+      cset_calculated_i(13, idd);
+
+      break;
+
+
 
 	default:
-			break;
+      break;
     }
 }
 
